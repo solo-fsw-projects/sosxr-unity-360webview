@@ -2,7 +2,7 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 
-# Maarten Folders: (# A starting /, such as in /[Bb]uilds/, will only look in the root directory...)
+# Folders. Starting /, such as in /[Bb]uilds/, will only look in the root directory...)
 [Bb]uild/
 [Bb]uilds/
 _[Bb]uilds/
@@ -62,25 +62,3 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
-
-# Maarten Files:
-*.snap
-*.ccProject
-Trauma/Library/ArtifactDB
-Trauma/Library/SourceAssetDB
-Trauma/.idea/.idea.Trauma/.idea/workspace.xml
-".DS_Store"
-"**/.DS_Store"
-
-
-# Wwise
-.cache
-*.akd
-*.prof
-*.validationcache
-*.wsettings
-
-# Clones
-Trauma_clone_0/
-Trauma/_Builds/SHINE_alpha.apk

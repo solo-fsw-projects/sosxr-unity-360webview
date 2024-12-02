@@ -53,28 +53,11 @@
 *.unity linguist-generated
 *.aar filter=lfs diff=lfs merge=lfs -text
 *.apk filter=lfs diff=lfs merge=lfs -text
-# Trauma Specific
-Trauma/Working[[:space:]]Builds/* filter=lfs diff=lfs merge=lfs -text
-# Wwise
-*.wav filter=lfs diff=lfs merge=lfs -text
-*.aif filter=lfs diff=lfs merge=lfs -text
-*.aiff filter=lfs diff=lfs merge=lfs -text
-*.resource filter=lfs diff=lfs merge=lfs -text
-*.unity3d filter=lfs diff=lfs merge=lfs -text
-*.assets filter=lfs diff=lfs merge=lfs -text
-*.unitypackage filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.psd filter=lfs diff=lfs merge=lfs -text
-*.zip filter=lfs diff=lfs merge=lfs -text
-*.ttc filter=lfs diff=lfs merge=lfs -text
+# Video
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+# Other
 *.dll filter=lfs diff=lfs merge=lfs -text
-*.ilk filter=lfs diff=lfs merge=lfs -text
-*.pdb filter=lfs diff=lfs merge=lfs -text
-*.exe filter=lfs diff=lfs merge=lfs -text
-*.chm filter=lfs diff=lfs merge=lfs -text
 *.bundle filter=lfs diff=lfs merge=lfs -text
-*.bnk filter=lfs diff=lfs merge=lfs -text
-AkSoundEngine filter=lfs diff=lfs merge=lfs -text
-Trauma/Assets/_mrstruijk/Components/_Scenes/6. filter=lfs diff=lfs merge=lfs -text
-env_SelfCo_NEW/LightingData.asset filter=lfs diff=lfs merge=lfs -text
+*.app filter=lfs diff=lfs merge=lfs -text
+/360WebView/Assets/Vuplex/WebView/Standalone/Mac/Plugins/VuplexWebViewMac.bundle/Contents/Frameworks/Vuplex[[:space:]]WebView.app/Contents/Frameworks/Chromium[[:space:]]Embedded[[:space:]]Framework.framework/Chromium[[:space:]]Embedded[[:space:]]Framework filter=lfs diff=lfs merge=lfs -text
+/360WebView/Assets/Vuplex/WebView/Standalone/Mac/Plugins/VuplexWebViewMac_with_codecs.bundle/Contents/Frameworks/Vuplex[[:space:]]WebView.app/Contents/Frameworks/Chromium[[:space:]]Embedded[[:space:]]Framework.framework/Chromium[[:space:]]Embedded[[:space:]]Framework filter=lfs diff=lfs merge=lfs -text
