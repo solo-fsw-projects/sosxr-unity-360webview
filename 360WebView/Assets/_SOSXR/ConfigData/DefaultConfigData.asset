@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81613a23e06c482c90df2482617bcd3e, type: 3}
+  m_Name: DefaultConfigData
+  m_EditorClassIdentifier: 
+  WebsiteUrl: https://researchwiki.solo.universiteitleiden.nl/xwiki/wiki/researchwiki.solo.universiteitleiden.nl/view/VR%20in%20Unity3D/Webview%20Tasks/#HTasks
+  ClipDirectory: /Users/mrstruijk/ArborXR/videos
+  Extensions:
+  - .mp4
+  PlayWay: 0
+  PlayWayString: One
+  Order: 3
+  OrderString: Counterbalanced
+  TaskName: TaskToDo
+  VideoName: Video_01.mp4
+  PPN: -1
+  ShowDebug: 0

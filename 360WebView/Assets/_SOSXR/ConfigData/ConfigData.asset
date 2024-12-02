@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519704ad63004de091072c6b188f9f81, type: 3}
+  m_Name: ConfigData
+  m_EditorClassIdentifier: 
+  WebsiteUrl: https://jatos.services.universiteitleiden.nl/publix/vfIL9c1c62i?PPN=1111
+  ClipDirectory: /Users/mrstruijk/ArborXR/videos
+  Extensions:
+  - .mp4
+  PlayWay: 1
+  PlayWayString: All
+  Order: 0
+  OrderString: Random
+  TaskName: TaskToDo
+  VideoName: 360_vr_master_series_|_free_download_|_london_on_tower_bridge (Original).mp4
+  PPN: 3333
+  ShowDebug: 0
+  m_defaultConfigData: {fileID: 11400000, guid: bed10de5d5b614eed994a22cf028c303, type: 2}
