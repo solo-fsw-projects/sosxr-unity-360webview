@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3882549112967612275}
   - component: {fileID: 743617095207454765}
   - component: {fileID: 5893399606333800482}
-  - component: {fileID: 195471752218594609}
   m_Layer: 5
   m_Name: DebugReshuffleVideos_Button
   m_TagString: Untagged
@@ -134,18 +133,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &195471752218594609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613368585306789019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a05ee10cbd974753808590188d31fc57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2521787750946253323
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +247,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -294,7 +281,6 @@ GameObject:
   - component: {fileID: 5388380555292692095}
   - component: {fileID: 5588660502427248710}
   - component: {fileID: 5229129348384463873}
-  - component: {fileID: 7385943671277670166}
   m_Layer: 5
   m_Name: LoadDefaultURL_Button
   m_TagString: Untagged
@@ -416,18 +402,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7385943671277670166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3487718196389865658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a05ee10cbd974753808590188d31fc57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3691340257779370155
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +618,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 27.35
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -666,7 +640,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -682,7 +656,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5, y: 5, z: 5, w: 5}
+  m_margin: {x: 25, y: 10, z: 25, w: 10}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -803,8 +777,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -312.50003, y: 440.5}
-  m_SizeDelta: {x: 1260, y: 360}
+  m_AnchoredPosition: {x: -313, y: 600}
+  m_SizeDelta: {x: 1280, y: 480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3876882020318147194
 CanvasRenderer:
@@ -869,8 +843,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7541979914897960017}
-  - component: {fileID: 9002875031616146174}
-  - component: {fileID: 7156733692613957247}
   m_Layer: 0
   m_Name: WebView
   m_TagString: Untagged
@@ -894,41 +866,6 @@ Transform:
   - {fileID: 1483636599636563454}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180.016, z: 0}
---- !u!114 &9002875031616146174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8710206012042249280}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e77f6e833b4d97a1c5104a706de467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_targetTag: Carrot
-  m_followTarget: {fileID: 0}
-  m_requireMinimumHeight: 1
-  m_minimumHeight: 0.5
-  m_requireMaximumHeight: 1
-  m_maximumHeight: 4
-  m_smoothTime: 2.5
---- !u!114 &7156733692613957247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8710206012042249280}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa5c494797ca4aa2aba6ac37bfdd5d6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_requiresTarget: 1
-  m_inverseRepeatRate: 0.1
-  Target: {fileID: 0}
-  m_targetTag: MainCamera
 --- !u!1 &8949173777589152004
 GameObject:
   m_ObjectHideFlags: 0

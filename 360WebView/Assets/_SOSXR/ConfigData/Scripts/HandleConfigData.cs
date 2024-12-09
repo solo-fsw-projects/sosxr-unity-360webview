@@ -1,4 +1,3 @@
-using mrstruijk.Events;
 using SOSXR.EnhancedLogger;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,7 +6,7 @@ using UnityEngine.Events;
 public class HandleConfigData : MonoBehaviour
 {
     public ConfigData ConfigData;
-    
+
     [SerializeField] private UnityEvent ConfigInformationChanged;
 
 
@@ -15,14 +14,14 @@ public class HandleConfigData : MonoBehaviour
     {
         ConfigData.LoadConfig();
     }
-    
+
 
     public void ChangeVideoClipName(string videoClipName)
     {
         AmendConfigData(videoClipName: videoClipName);
     }
 
-    
+
     public void AddParticipantNumber(string participantNumber)
     {
         if (int.TryParse(participantNumber, out var result))
@@ -34,6 +33,7 @@ public class HandleConfigData : MonoBehaviour
             this.Error("Participant number is not a number");
         }
     }
+
 
     public void AddParticipantNumber(int participantNumber)
     {
@@ -53,8 +53,6 @@ public class HandleConfigData : MonoBehaviour
             ConfigData.VideoName = videoClipName;
         }
 
-      ConfigInformationChanged?.Invoke();
+        ConfigInformationChanged?.Invoke();
     }
-
-
 }

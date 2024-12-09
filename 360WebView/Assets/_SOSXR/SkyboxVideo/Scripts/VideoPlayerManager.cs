@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using SOSXR;
@@ -85,7 +84,6 @@ public class VideoPlayerManager : MonoBehaviour
 
     private void OnEnable()
     {
-        //EventsSystem.KeyCodeEntered += StartPlayer;
         VideoPlayer.errorReceived += ReceivedAnError;
     }
 
@@ -218,6 +216,7 @@ public class VideoPlayerManager : MonoBehaviour
     public void ReshuffleVideos()
     {
         m_configData.Order = Order.Random;
+        m_configData.PlayWay = PlayWay.All;
 
         StartPlaying();
     }
@@ -240,18 +239,8 @@ public class VideoPlayerManager : MonoBehaviour
 
     private void OnDisable()
     {
-        //EventsSystem.KeyCodeEntered -= StartPlayer;
         VideoPlayer.errorReceived -= ReceivedAnError;
 
         StopAllCoroutines();
     }
-}
-
-
-[Serializable]
-public class VideoSettingsCustom
-{
-    [Tooltip("Full name, without path, but with extension. E.g. 'myVideo.mp4'")]
-    public string ClipName;
-    public Vector3 AudioLocation;
 }
