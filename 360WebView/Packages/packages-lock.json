@@ -7,7 +7,7 @@
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0"
       },
-      "hash": "53b9bed8338295e685fedd94dd0bd24aa5b5bc3c"
+      "hash": "d17539a5a08e14083cf73351e88317438c0a879a"
     },
     "com.mischief.markdownviewer": {
       "version": "https://github.com/gwaredd/UnityMarkdownViewer.git",
@@ -21,28 +21,28 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "051f18a23f06c28e4be01218441eb5f39105524a"
+      "hash": "2dc6e7f660e687d9ca9349a025c394b0f5077047"
     },
     "com.sosxr.enhancedlogger": {
       "version": "https://github.com/mrstruijk/EnhancedLogger.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f997f9acb301f4868bbea1c4f0009b350039e2b3"
+      "hash": "cb6ea3cdda6ccf9509aa91e9fa81a3552b18ab93"
     },
     "com.sosxr.extensionmethods": {
       "version": "https://github.com/solo-fsw/sosxr-unity-extensionmethods.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "5bd9edb5170149d217da5ba5c819bc397d7dcfda"
+      "hash": "29c242ff664c26534bb7028537be4960d0a1d062"
     },
     "com.sosxr.keyboard": {
       "version": "https://github.com/solo-fsw/sosxr-unity-keyboard.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "66f351e1d61f7b318ac4b9518b713ef1d96ef295"
+      "hash": "34b51d1fbf4146fa2da53a564dbaf401c653f8d7"
     },
     "com.sosxr.readmehelpers": {
       "version": "https://github.com/solo-fsw/sosxr-unity-readmehelpers.git",
@@ -56,7 +56,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "17e54a146746a4ad349d5acfea70b6d8842dbd44"
+      "hash": "0bdb488cee144d89da21909ca0697e2a7c00474a"
     },
     "com.tarodev.autosave": {
       "version": "https://github.com/solo-fsw/sosxr-unity-autosave.git",
@@ -104,7 +104,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "2.10.2",
+      "version": "2.10.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -176,9 +176,9 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.xr.interaction.toolkit": "3.0.5",
+        "com.unity.xr.interaction.toolkit": "3.0.7",
         "com.unity.xr.oculus": "4.4.0",
-        "com.unity.xr.openxr": "1.13.0"
+        "com.unity.xr.openxr": "1.13.1"
       }
     },
     "com.unity.ide.rider": {
@@ -209,7 +209,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.learn.iet-framework": {
-      "version": "4.0.2",
+      "version": "4.0.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -445,7 +445,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.interaction.toolkit": {
-      "version": "3.0.5",
+      "version": "3.0.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -504,7 +504,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.openxr": {
-      "version": "1.13.0",
+      "version": "1.13.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {

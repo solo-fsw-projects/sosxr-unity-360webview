@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FindControllersUsingTag : MonoBehaviour
 {
-    [TagSelector] [SerializeField] private string m_tagToSearchFor = "XR_Controller";
+    [SOSXR.EditorTools.TagSelector] [SerializeField] private string m_tagToSearchFor = "XR_Controller";
 
     [SerializeField] [DisableEditing] private GameObject[] _foundGameObjects;
 
