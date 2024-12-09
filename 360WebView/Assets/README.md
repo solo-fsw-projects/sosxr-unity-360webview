@@ -1,5 +1,10 @@
 # Quest Template
 
+# 09-12-2024
+- [x] Updating to 6.0.30
+- [x] Updating packages
+- 
+
 # 25-10-2024
 Testing
 

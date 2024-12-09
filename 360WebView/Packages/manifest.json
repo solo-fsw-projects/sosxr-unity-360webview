@@ -2,6 +2,7 @@
   "dependencies": {
     "com.browar.editor-toolbox": "https://github.com/arimger/Unity-Editor-Toolbox.git#upm",
     "com.mischief.markdownviewer": "https://github.com/gwaredd/UnityMarkdownViewer.git",
+    "com.sosxr.buildhelpers": "https://github.com/solo-fsw/sosxr-unity-buildhelpers.git",
     "com.sosxr.editortools": "https://github.com/solo-fsw/sosxr-unity-editortools.git",
     "com.sosxr.enhancedlogger": "https://github.com/mrstruijk/EnhancedLogger.git",
     "com.sosxr.extensionmethods": "https://github.com/solo-fsw/sosxr-unity-extensionmethods.git",
