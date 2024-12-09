@@ -1,41 +1,83 @@
 {
     "m_SelectedDeviceId": "2G0YC1ZG1N0383",
     "m_SelectedProcess": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "2G0YC1ZG1N0383",
+        "name": "com.SOSXR.Video360",
+        "processId": 14565,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownProcessesForSerialization": [
         {
             "deviceId": "2G0YC1ZG1N0383",
-            "name": "com.SOSXR.Video360",
-            "processId": 10116,
-            "exited": true
-        },
-        {
-            "deviceId": "2G0YC1ZG1N0383",
-            "name": "com.SOSXR.Video360",
-            "processId": 11340,
-            "exited": true
-        },
-        {
-            "deviceId": "2G0YC1ZG1N0383",
-            "name": "com.SOSXR.Video360",
-            "processId": 19276,
-            "exited": true
-        },
-        {
-            "deviceId": "2G0YC1ZG1N0383",
-            "name": "com.SOSXR.Video360",
-            "processId": 10879,
-            "exited": true
-        },
-        {
-            "deviceId": "2G0YC1ZG1N0383",
             "name": "com.oculus.shellenv",
             "processId": 2320,
+            "exited": false
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 30258,
+            "exited": true
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 2763,
+            "exited": true
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 5557,
+            "exited": true
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 7035,
+            "exited": true
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 8713,
+            "exited": false
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 9424,
+            "exited": false
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 11004,
+            "exited": false
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 12484,
+            "exited": false
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 14044,
+            "exited": false
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 14382,
+            "exited": false
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 14565,
             "exited": false
         }
     ],

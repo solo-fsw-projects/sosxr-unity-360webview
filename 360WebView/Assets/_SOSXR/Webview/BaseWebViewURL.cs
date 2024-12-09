@@ -17,7 +17,7 @@ public abstract class BaseWebViewURL : MonoBehaviour
     {
         if (m_webViewPrefab == null)
         {
-            m_webViewPrefab = FindObjectOfType<CanvasWebViewPrefab>();
+            m_webViewPrefab = FindFirstObjectByType<CanvasWebViewPrefab>();
         }
     }
 

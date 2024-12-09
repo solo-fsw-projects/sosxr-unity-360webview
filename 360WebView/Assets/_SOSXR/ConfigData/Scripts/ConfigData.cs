@@ -15,6 +15,10 @@ public class ConfigData : DefaultConfigData
 
     /// <summary>
     ///     Gets the path to the config file in the persistent data path.
+    ///     On Android is at:
+    ///     - /storage/emulated/0/Android/data/com.SOSXR.Video360/files/config.json
+    ///     On macOS is at:
+    ///     - /Users/[USERNAME]/Library/Application Support/SOSXR/Video360/config.json
     /// </summary>
     private string ConfigPath => Path.Combine(Application.persistentDataPath, _configFileName);
 
@@ -91,7 +95,6 @@ public class ConfigData : DefaultConfigData
     {
         try
         {
-            // Load JSON from file
             var jsonData = File.ReadAllText(ConfigPath);
 
             // Find the m_defaultConfigData field

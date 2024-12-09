@@ -10,9 +10,11 @@ public class DebugToUnityEvent : MonoBehaviour
 
     private void OnEnable()
     {
-        if (m_configData.ShowDebug)
+        if (!m_configData.ShowDebug)
         {
-            m_eventToFire.Invoke();
+            return;
         }
+
+        m_eventToFire.Invoke();
     }
 }
