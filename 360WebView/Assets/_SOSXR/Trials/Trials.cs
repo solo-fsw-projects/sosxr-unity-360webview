@@ -13,8 +13,7 @@ namespace SOSXR
             Conditions = conditions;
             ConfigData = configData;
 
-            var lastDigit = ConfigData.PPN % 10;
-            LastDigitModulus = lastDigit % Conditions.Count;
+            LastDigitModulus = ConfigData.PPN % Conditions.Count;
             Debug.Log(LastDigitModulus);
 
             if (ConfigData.Order == Order.Permutation)
@@ -64,8 +63,6 @@ namespace SOSXR
 
 
         public int LastDigitModulus { get; }
-
-
         private List<T> Conditions { get; }
         public List<T> OrderedConditions { get; }
         private ConfigData ConfigData { get; }
@@ -137,7 +134,3 @@ public class PermutationContainer<T>
 {
     public List<T> Permutations; // This holds the actual permutation
 }
- 
- 
- 
- 

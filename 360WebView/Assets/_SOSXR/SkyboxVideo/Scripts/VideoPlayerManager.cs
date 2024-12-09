@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using mrstruijk.Events;
 using SOSXR;
 using SOSXR.EditorTools;
 using SOSXR.EnhancedLogger;
@@ -25,7 +24,7 @@ public class VideoPlayerManager : MonoBehaviour
     [SerializeField] public List<VideoSettingsCustom> Clips;
     [SerializeField] [DisableEditing] private List<VideoSettingsCustom> m_randomizedClipList;
     [SerializeField] [Range(0, 60)] private float m_betweenEachClipPauseDuration = 2.5f;
-[SerializeField] private UnityEvent<string> VideoClipStarted;
+    [SerializeField] private UnityEvent<string> VideoClipStarted;
 
     [Header("Info")]
     [SerializeField] [DisableEditing] public string CurrentClipName;

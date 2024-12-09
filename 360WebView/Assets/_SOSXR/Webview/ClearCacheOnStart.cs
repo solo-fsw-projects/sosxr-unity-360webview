@@ -7,7 +7,7 @@ public class ClearCacheOnStart : MonoBehaviour
     [SerializeField] private bool m_clearCacheOnStart = true;
 
 
-    private void Start()
+    private void Awake()
     {
         if (!m_clearCacheOnStart)
         {

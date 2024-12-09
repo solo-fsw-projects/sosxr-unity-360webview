@@ -43,6 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 58ce0a053a9974944bbf03b24dca945f, type: 2}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -210,14 +211,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e4443ac55f34a828d94e5d711415f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_videoPlayer: {fileID: 8186127175916117540}
+  VideoPlayer: {fileID: 8186127175916117540}
   m_audioSource: {fileID: 7532655423123001711}
   m_renderMaterial: {fileID: 2100000, guid: 6dee6f960253e454e9da6c4168fe27da, type: 2}
   m_configData: {fileID: 11400000, guid: c42129e08a18a4cce9a68e1ac2a318b0, type: 2}
-  m_beforeFirstClipPauseDuration: 5
-  m_clips: []
-  _currentClipDuration: 0
-  _currentClipTime: 0
-  m_betweenEachClipPauseDuration: 2.5
-  m_infoText: {fileID: 0}
   m_startAutomatically: 0
+  m_beforeFirstClipPauseDuration: 5
+  Clips: []
+  m_randomizedClipList: []
+  m_betweenEachClipPauseDuration: 2.5
+  VideoClipStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  CurrentClipName: 
+  CurrentClipDuration: 0
+  CurrentClipTime: 0
+  Dimensions: {x: 0, y: 0}

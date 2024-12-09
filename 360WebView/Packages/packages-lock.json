@@ -23,14 +23,14 @@
       "dependencies": {
         "com.unity.textmeshpro": "3.0.9"
       },
-      "hash": "67dc3f09759ae14285faa405cde26a11294f9422"
+      "hash": "837457f024d6e46f0c8df7a7179ec47401fc83ac"
     },
     "com.sosxr.editortools": {
       "version": "https://github.com/solo-fsw/sosxr-unity-editortools.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2dc6e7f660e687d9ca9349a025c394b0f5077047"
+      "hash": "faf0636a4d17fbcc96fafe2914213cf3bf7dd7f1"
     },
     "com.sosxr.enhancedlogger": {
       "version": "https://github.com/mrstruijk/EnhancedLogger.git",
@@ -235,10 +235,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.memoryprofiler": {
-      "version": "1.1.1",
+      "version": "1.1.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
+        "com.unity.burst": "1.8.0",
+        "com.unity.collections": "1.2.3",
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.profiling.core": "1.0.0",
         "com.unity.editorcoroutines": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -521,8 +525,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.openxr": {
-      "version": "1.13.1",
-      "depth": 1,
+      "version": "1.13.2",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.inputsystem": "1.6.3",

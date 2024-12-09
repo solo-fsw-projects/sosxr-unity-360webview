@@ -15,6 +15,8 @@ During my holiday there were some unforseen complications. For some reason the v
 - Camera Environment Background Type Skybox instead of Solid Color. 
 This seems an easy fix, but it was quite some time before I figured the solution. I still don't know the reason how this got so. On my testing at home there was none of this before my holiday. I will need to test this some more to make sure it's stable.
 
+
+
 # 02-10-2024
 - Moved the keyboard to spawn in front of person, instead of in the middle of the room.
 
