@@ -785,11 +785,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1936331629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1522126853 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1613368585306789019, guid: 068196c6e654e42e28d9a3badb26150a, type: 3}
-  m_PrefabInstance: {fileID: 7738565516714541202}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1598269138
 GameObject:
   m_ObjectHideFlags: 0
@@ -22302,7 +22297,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1613368585306789019, guid: 068196c6e654e42e28d9a3badb26150a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1613368585306789019, guid: 068196c6e654e42e28d9a3badb26150a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22362,7 +22357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5288420970195638265, guid: 068196c6e654e42e28d9a3badb26150a, type: 3}
       propertyPath: m_eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5288420970195638265, guid: 068196c6e654e42e28d9a3badb26150a, type: 3}
       propertyPath: m_eventToFire.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -22371,7 +22366,7 @@ PrefabInstance:
     - target: {fileID: 5288420970195638265, guid: 068196c6e654e42e28d9a3badb26150a, type: 3}
       propertyPath: m_eventToFire.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1522126853}
+      objectReference: {fileID: 1198096471}
     - target: {fileID: 5288420970195638265, guid: 068196c6e654e42e28d9a3badb26150a, type: 3}
       propertyPath: m_eventToFire.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
