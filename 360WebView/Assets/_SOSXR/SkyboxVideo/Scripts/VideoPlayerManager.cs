@@ -15,7 +15,7 @@ public class VideoPlayerManager : MonoBehaviour
     public VideoPlayer VideoPlayer;
     [SerializeField] private AudioSource m_audioSource;
     [SerializeField] private Material m_renderMaterial;
-    [SerializeField] public ConfigData m_configData;
+    [SerializeField] public WebViewConfigData m_configData;
 
     [Header("Clip Settings")]
     [SerializeField] private bool m_startAutomatically = true;
@@ -31,23 +31,22 @@ public class VideoPlayerManager : MonoBehaviour
     [SerializeField] [DisableEditing] public float CurrentClipTime;
     [DisableEditing] public Vector2Int Dimensions;
 
-
     private RenderTexture _renderTexture;
-
     private Coroutine _playerCR;
-
-
     public Trials<VideoSettingsCustom> Trials;
 
 
-    private void Awake()
+    private void OnValidate()
     {
         if (VideoPlayer == null)
         {
             VideoPlayer = GetComponentInChildren<VideoPlayer>();
         }
 
-        VideoPlayer.source = VideoSource.Url;
+        if (VideoPlayer.source != VideoSource.Url)
+        {
+            VideoPlayer.source = VideoSource.Url;
+        }
 
         if (m_audioSource == null)
         {
@@ -61,6 +60,8 @@ public class VideoPlayerManager : MonoBehaviour
         if (VideoPlayer == null || m_audioSource == null)
         {
             this.Error("VideoPlayer or AudioSource not assigned.");
+
+            enabled = false;
 
             return;
         }
@@ -154,7 +155,7 @@ public class VideoPlayerManager : MonoBehaviour
 
                 yield return new WaitForSeconds(m_betweenEachClipPauseDuration);
             }
-        } while (m_configData.PlayWay == PlayWay.Repeat);
+        } while (m_configData.PlayWayEnum == WebViewConfigData.PlayWay.Repeat);
 
         this.Debug("Done playing all clips");
     }
@@ -181,6 +182,12 @@ public class VideoPlayerManager : MonoBehaviour
 
     private void CreateNewRenderTexture()
     {
+        if (_renderTexture != null)
+        {
+            this.Info("Destroying old RenderTexture");
+            Destroy(_renderTexture);
+        }
+
         Dimensions.x = (int) VideoPlayer.width;
         Dimensions.y = (int) VideoPlayer.height;
         _renderTexture = new RenderTexture(Dimensions.x, Dimensions.y, 24, RenderTextureFormat.Default);
@@ -188,6 +195,8 @@ public class VideoPlayerManager : MonoBehaviour
 
         m_renderMaterial.mainTexture = _renderTexture;
         VideoPlayer.targetTexture = _renderTexture;
+
+        this.Info("Created new RenderTexture");
     }
 
 
@@ -212,11 +221,11 @@ public class VideoPlayerManager : MonoBehaviour
     }
 
 
-    [ContextMenu(nameof(ReshuffleVideos))]
-    public void ReshuffleVideos()
+    [ContextMenu(nameof(SetConfigToRandomAndReshuffleVideos))]
+    public void SetConfigToRandomAndReshuffleVideos()
     {
-        m_configData.Order = Order.Random;
-        m_configData.PlayWay = PlayWay.All;
+        m_configData.Order = WebViewConfigData.Ordering.Random;
+        m_configData.PlayWayEnum = WebViewConfigData.PlayWay.All;
 
         StartPlaying();
     }

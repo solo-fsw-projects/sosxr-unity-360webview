@@ -10,11 +10,20 @@
       "hash": "d17539a5a08e14083cf73351e88317438c0a879a"
     },
     "com.mischief.markdownviewer": {
-      "version": "https://github.com/gwaredd/UnityMarkdownViewer.git",
+      "version": "https://github.com/solo-fsw/sosxr-unity-markdownviewer.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "d4a969bb6f29adff8830f4226cad9a81b4b0a6af"
+      "hash": "65dcad3ef19d461c02129961aa73d74b33aa6522"
+    },
+    "com.sosxr.additionalunityevents": {
+      "version": "https://github.com/solo-fsw/sosxr-unity-additionalunityevents.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.inputsystem": "1.8.1"
+      },
+      "hash": "211c0072e3954446e6db274584089405d7329411"
     },
     "com.sosxr.buildhelpers": {
       "version": "https://github.com/solo-fsw/sosxr-unity-buildhelpers.git",
@@ -23,59 +32,69 @@
       "dependencies": {
         "com.unity.textmeshpro": "3.0.9"
       },
-      "hash": "837457f024d6e46f0c8df7a7179ec47401fc83ac"
+      "hash": "80721a9ea9bbd14c163bf7144be0335c49430cca"
+    },
+    "com.sosxr.configdata": {
+      "version": "https://github.com/solo-fsw/sosxr-unity-configdata.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b55e8800769cf6efc9a264993c135da91acc2ab8"
     },
     "com.sosxr.editortools": {
       "version": "https://github.com/solo-fsw/sosxr-unity-editortools.git",
       "depth": 0,
       "source": "git",
-      "dependencies": {},
-      "hash": "faf0636a4d17fbcc96fafe2914213cf3bf7dd7f1"
+      "dependencies": {
+        "com.unity.xr.interaction.toolkit": "3.0.7",
+        "com.unity.recorder": "5.1.2"
+      },
+      "hash": "1603c71f1ef2af5c3df062039c67e38768bb6498"
     },
     "com.sosxr.enhancedlogger": {
       "version": "https://github.com/mrstruijk/EnhancedLogger.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "cb6ea3cdda6ccf9509aa91e9fa81a3552b18ab93"
+      "hash": "18b1de44f72cd564b3a32cdee2a19ad527cb4916"
     },
     "com.sosxr.extensionmethods": {
       "version": "https://github.com/solo-fsw/sosxr-unity-extensionmethods.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "29c242ff664c26534bb7028537be4960d0a1d062"
+      "hash": "b6c8ca3f0846d4cbfbd9854ef8bfa9785f278687"
     },
     "com.sosxr.keyboard": {
       "version": "https://github.com/solo-fsw/sosxr-unity-keyboard.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "34b51d1fbf4146fa2da53a564dbaf401c653f8d7"
+      "hash": "2c39041658e5144b3d5fa559fe78d3b6f5d6f883"
     },
     "com.sosxr.readmehelpers": {
       "version": "https://github.com/solo-fsw/sosxr-unity-readmehelpers.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "afa14ec466d927d00206dc5381244b487c7a6f5b"
+      "hash": "d7c3cb5fee5a67e8847ffe90f497a3df0474b49f"
     },
     "com.sosxr.simplehelpers": {
       "version": "https://github.com/solo-fsw/sosxr-unity-simplehelpers.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "0bdb488cee144d89da21909ca0697e2a7c00474a"
+      "hash": "6c3c57fdddcd9312b2f398c2a42a2cfe995efd39"
     },
     "com.tarodev.autosave": {
       "version": "https://github.com/solo-fsw/sosxr-unity-autosave.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "c345bbb6e36f46a849f2b1f809bbfa42d1705a66"
+      "hash": "900d9ea04c8a0a773bedfabc3544504d385ffaf5"
     },
     "com.unity.adaptiveperformance": {
-      "version": "5.1.0",
+      "version": "5.1.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -102,8 +121,17 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.bindings.openimageio": {
+      "version": "1.0.0",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.collections": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.burst": {
-      "version": "1.8.18",
+      "version": "1.8.19",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -113,11 +141,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "2.10.3",
+      "version": "3.1.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.test-framework": "1.1.31"
+        "com.unity.splines": "2.0.0",
+        "com.unity.modules.imgui": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -135,7 +164,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.5.2",
+      "version": "2.6.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -175,7 +204,7 @@
         "com.unity.ide.visualstudio": "2.0.22",
         "com.unity.ide.rider": "3.0.31",
         "com.unity.editorcoroutines": "1.0.0",
-        "com.unity.performance.profile-analyzer": "1.2.2",
+        "com.unity.performance.profile-analyzer": "1.2.3",
         "com.unity.test-framework": "1.4.5",
         "com.unity.testtools.codecoverage": "1.2.6"
       }
@@ -186,8 +215,8 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.xr.interaction.toolkit": "3.0.7",
-        "com.unity.xr.oculus": "4.4.0",
-        "com.unity.xr.openxr": "1.13.2"
+        "com.unity.xr.oculus": "4.5.0",
+        "com.unity.xr.openxr": "1.14.0"
       }
     },
     "com.unity.ide.rider": {
@@ -209,7 +238,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.11.2",
+      "version": "1.12.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -218,7 +247,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.learn.iet-framework": {
-      "version": "4.0.3",
+      "version": "4.0.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -248,7 +277,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.mobile.android-logcat": {
-      "version": "1.4.3",
+      "version": "1.4.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -277,7 +306,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.performance.profile-analyzer": {
-      "version": "1.2.2",
+      "version": "1.2.3",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -288,6 +317,17 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.recorder": {
+      "version": "5.1.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.timeline": "1.8.7",
+        "com.unity.collections": "1.2.4",
+        "com.unity.bindings.openimageio": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
@@ -356,6 +396,16 @@
         "com.unity.searcher": "4.9.2"
       }
     },
+    "com.unity.splines": {
+      "version": "2.7.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.settings-manager": "1.0.3"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.test-framework": {
       "version": "1.4.5",
       "depth": 1,
@@ -396,7 +446,7 @@
       }
     },
     "com.unity.timeline": {
-      "version": "1.8.7",
+      "version": "1.8.8",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -426,7 +476,7 @@
       }
     },
     "com.unity.xr.arfoundation": {
-      "version": "6.0.3",
+      "version": "6.0.5",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -444,7 +494,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.core-utils": {
-      "version": "2.4.0",
+      "version": "2.5.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -466,7 +516,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.interaction.toolkit": {
-      "version": "3.0.7",
+      "version": "3.1.0-pre.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -476,7 +526,7 @@
         "com.unity.mathematics": "1.2.6",
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.imgui": "1.0.0",
-        "com.unity.xr.core-utils": "2.2.3",
+        "com.unity.xr.core-utils": "2.4.0",
         "com.unity.modules.physics": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -516,7 +566,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.oculus": {
-      "version": "4.4.0",
+      "version": "4.5.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -525,12 +575,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.openxr": {
-      "version": "1.13.2",
+      "version": "1.14.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.inputsystem": "1.6.3",
-        "com.unity.xr.core-utils": "2.1.1",
+        "com.unity.xr.core-utils": "2.3.0",
         "com.unity.xr.management": "4.4.0",
         "com.unity.xr.legacyinputhelpers": "2.1.2"
       },
@@ -543,7 +593,7 @@
       "dependencies": {
         "com.unity.modules.androidjni": "1.0.0"
       },
-      "hash": "518f8a06d18c71ea70924a4f813d4ca664281706"
+      "hash": "22f1dc4dc353186492b60297e1c72eaf2258d0e3"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

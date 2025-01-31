@@ -1,6 +1,7 @@
-using SOSXR.EnhancedLogger;
 using UnityEngine;
-using UnityEngine.Android;
+#if UNITY_ANDROID
+using static UnityEngine.Android.Permission;
+#endif
 
 
 public class GetPermissionOnAndroid : MonoBehaviour
@@ -10,34 +11,65 @@ public class GetPermissionOnAndroid : MonoBehaviour
         #if UNITY_ANDROID && !UNITY_EDITOR
             GetExternalReadPermission();
             GetExternalWritePermission();
+            
+            if (GetAndroidAPILevel() >= 30) // For Android 11+
+            {
+                // RequestManageExternalStoragePermission();
+            }
         #endif
     }
 
 
     private void GetExternalReadPermission()
     {
-        GetPermission(Permission.ExternalStorageRead);
+        GetPermission(ExternalStorageRead);
     }
 
 
     private static void GetExternalWritePermission()
     {
-        GetPermission(Permission.ExternalStorageWrite);
+        GetPermission(ExternalStorageWrite);
     }
 
 
     private static void GetPermission(string permission)
     {
-        if (Permission.HasUserAuthorizedPermission(permission))
+        if (HasUserAuthorizedPermission(permission))
         {
-            Log.Success("GetPermissionOnAndroid", "Permission is already granted.");
+            Debug.Log($"GetPermissionOnAndroid: Permission {permission} is already granted.");
 
             return;
         }
 
-        Log.Info("GetPermissionOnAndroid", "Requesting permission to", permission);
+        Debug.LogFormat("GetPermissionOnAndroid {0}, {1}", "Requesting permission to", permission);
+        RequestUserPermission(permission);
+    }
 
-        Permission.RequestUserPermission(permission);
+
+    private int GetAndroidAPILevel()
+    {
+        #if UNITY_ANDROID && !UNITY_EDITOR
+            using (var version = new AndroidJavaClass("android.os.Build$VERSION"))
+            {
+                return version.GetStatic<int>("SDK_INT");
+            }
+        #else
+        return 0;
+        #endif
+    }
+
+
+    private void RequestManageExternalStoragePermission()
+    {
+        #if UNITY_ANDROID && !UNITY_EDITOR
+            using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+            using (var currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
+            using (var uri = new AndroidJavaClass("android.provider.Settings").GetStatic<AndroidJavaObject>("ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION"))
+            {
+                var intent = new AndroidJavaObject("android.content.Intent", uri);
+                currentActivity.Call("startActivity", intent);
+            }
+        #endif
     }
 }
 
@@ -49,7 +81,8 @@ public class GetPermissionOnAndroid : MonoBehaviour
              package="com.SOSXR.Video360"
              xmlns:tools="http://schemas.android.com/tools">
 
-       <application>
+       <application
+           android:requestLegacyExternalStorage="true">
            <activity android:name="com.unity3d.player.UnityPlayerActivity">
                <intent-filter>
                    <action android:name="android.intent.action.MAIN" />
@@ -61,6 +94,7 @@ public class GetPermissionOnAndroid : MonoBehaviour
 
        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+       <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
 
    </manifest>
 */

@@ -19,6 +19,7 @@ MonoBehaviour:
   m_colorSubmissionModes:
     m_List: 00000000
   m_depthSubmissionMode: 0
+  m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
   m_foveatedRenderingApi: 0
@@ -277,8 +278,6 @@ MonoBehaviour:
   - {fileID: 154189092879288027}
   - {fileID: -1689305857417762847}
   - {fileID: 2316775424616146661}
-  - {fileID: -1335495951842507192}
-  - {fileID: -3234907419357522562}
   - {fileID: -5611916350011621528}
   - {fileID: -1503669746220067351}
   - {fileID: -8527224385079612281}
@@ -287,6 +286,7 @@ MonoBehaviour:
   m_colorSubmissionModes:
     m_List: 00000000
   m_depthSubmissionMode: 0
+  m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
   m_foveatedRenderingApi: 0
@@ -1142,8 +1142,6 @@ MonoBehaviour:
   - {fileID: 4743943348186933471}
   - {fileID: 9066763670827978045}
   - {fileID: -7581625304019661375}
-  - {fileID: -6902458400009491406}
-  - {fileID: 3263352684578023210}
   - {fileID: -5535866036023308493}
   - {fileID: 8862657227425273664}
   m_renderMode: 1
@@ -1151,6 +1149,7 @@ MonoBehaviour:
   m_colorSubmissionModes:
     m_List: 00000000
   m_depthSubmissionMode: 0
+  m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
   m_foveatedRenderingApi: 0
@@ -1742,8 +1741,6 @@ MonoBehaviour:
   - {fileID: 4801271178698355083}
   - {fileID: 9159362667335797102}
   - {fileID: 7078655044340473933}
-  - {fileID: 4558763075746818002}
-  - {fileID: 7378705895584626792}
   - {fileID: -8755262577418548715}
   - {fileID: -8669364960836573840}
   - {fileID: -6032148639818375418}
@@ -1752,6 +1749,7 @@ MonoBehaviour:
   m_colorSubmissionModes:
     m_List: 00000000
   m_depthSubmissionMode: 0
+  m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
   m_foveatedRenderingApi: 0
@@ -2208,6 +2206,8 @@ MonoBehaviour:
   optimizeBufferDiscards: 0
   lateLatchingMode: 0
   lateLatchingDebug: 0
+  optimizeMultiviewRenderRegions: 0
+  spacewarpMotionVectorTextureFormat: 0
 --- !u!114 &7558681416710770871
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ namespace SOSXR
 {
     public class Trials<T>
     {
-        public Trials(List<T> conditions, ConfigData configData)
+        public Trials(List<T> conditions, WebViewConfigData configData)
         {
             if (conditions == null || conditions.Count == 0)
             {
@@ -23,15 +23,15 @@ namespace SOSXR
             Conditions = conditions;
             ConfigData = configData;
 
-            if (ConfigData.Order == Order.Permutation)
+            if (ConfigData.Order == WebViewConfigData.Ordering.Permutation)
             {
                 OrderedConditions = Permutations.GetPermutationAtIndex(Conditions, Modulus);
             }
-            else if (ConfigData.Order == Order.Counterbalanced)
+            else if (ConfigData.Order == WebViewConfigData.Ordering.Counterbalanced)
             {
                 Modulus = ConfigData.PPN % Conditions.Count;
 
-                if (ConfigData.PlayWay == PlayWay.One)
+                if (ConfigData.PlayWayEnum == WebViewConfigData.PlayWay.One)
                 {
                     OrderedConditions = new List<T>();
                     var index = Mathf.Clamp(Modulus, 0, Conditions.Count - 1);
@@ -48,9 +48,9 @@ namespace SOSXR
                     }
                 }
             }
-            else if (ConfigData.Order == Order.InOrder)
+            else if (ConfigData.Order == WebViewConfigData.Ordering.InOrder)
             {
-                if (ConfigData.PlayWay == PlayWay.One)
+                if (ConfigData.PlayWayEnum == WebViewConfigData.PlayWay.One)
                 {
                     Modulus = ConfigData.PPN % Conditions.Count;
                     OrderedConditions = new List<T> {Conditions[Modulus]};
@@ -60,9 +60,9 @@ namespace SOSXR
                     OrderedConditions = Conditions;
                 }
             }
-            else if (ConfigData.Order == Order.Random)
+            else if (ConfigData.Order == WebViewConfigData.Ordering.Random)
             {
-                if (ConfigData.PlayWay == PlayWay.One)
+                if (ConfigData.PlayWayEnum == WebViewConfigData.PlayWay.One)
                 {
                     Modulus = ConfigData.PPN % Conditions.Count;
                     OrderedConditions = new List<T> {Conditions[Modulus]};
@@ -79,6 +79,6 @@ namespace SOSXR
         public int Modulus { get; }
         public List<T> Conditions { get; }
         public List<T> OrderedConditions { get; }
-        private ConfigData ConfigData { get; }
+        private WebViewConfigData ConfigData { get; }
     }
 }

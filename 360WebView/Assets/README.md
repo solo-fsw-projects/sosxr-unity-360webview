@@ -1,11 +1,16 @@
 # Quest Template
 
+# 2025-02-03
+
+- [ ] Fixing the PPN being passed on in the URL
+
+
+
 # 09-12-2024
 - [x] Updating to 6.0.30
 - [x] Updating packages
 - [x] Modulo on full participantnumber instead of only last digit
 - [ ] Match table to desk (height 80, edge of desk on top of lower edge of 'goot')
-- 
 
 
 # 25-10-2024

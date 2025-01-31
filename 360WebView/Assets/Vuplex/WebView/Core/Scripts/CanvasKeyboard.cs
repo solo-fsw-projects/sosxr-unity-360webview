@@ -11,31 +11,32 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
-using Vuplex.WebView.Internal;
 
-namespace Vuplex.WebView {
 
+namespace Vuplex.WebView
+{
     /// <summary>
-    /// Like the Keyboard prefab, except optimized for use in a Canvas.
-    /// You can add a CanvasKeyboard to your scene either by dragging the CanvasKeyboard.prefab file
-    /// into a Canvas via the editor or by programmatically calling CanvasKeyboard.Instantiate().
-    /// For an example, please see 3D WebView's CanvasWorldSpaceDemo scene.
+    ///     Like the Keyboard prefab, except optimized for use in a Canvas.
+    ///     You can add a CanvasKeyboard to your scene either by dragging the CanvasKeyboard.prefab file
+    ///     into a Canvas via the editor or by programmatically calling CanvasKeyboard.Instantiate().
+    ///     For an example, please see 3D WebView's CanvasWorldSpaceDemo scene.
     /// </summary>
     /// <remarks>
-    /// Important note: 2D WebView for WebGL doesn't support CanvasKeyboard due to a browser limitation
-    /// where clicking on the keyboard causes it to steal focus from webviews.
+    ///     Important note: 2D WebView for WebGL doesn't support CanvasKeyboard due to a browser limitation
+    ///     where clicking on the keyboard causes it to steal focus from webviews.
     /// </remarks>
-    public class CanvasKeyboard : BaseKeyboard {
-
+    public class CanvasKeyboard : BaseKeyboard
+    {
         /// <summary>
-        /// Sets the keyboard's initial resolution in pixels per Unity unit.
-        /// You can change the resolution to make the keyboard's content appear larger or smaller.
-        /// For more information on scaling web content, see
-        /// [this support article](https://support.vuplex.com/articles/how-to-scale-web-content).
+        ///     Sets the keyboard's initial resolution in pixels per Unity unit.
+        ///     You can change the resolution to make the keyboard's content appear larger or smaller.
+        ///     For more information on scaling web content, see
+        ///     [this support article](https://support.vuplex.com/articles/how-to-scale-web-content).
         /// </summary>
         [Internal.Label("Resolution (px / Unity unit)")]
         [Tooltip("You can change this to make web content appear larger or smaller.")]
@@ -43,25 +44,34 @@ namespace Vuplex.WebView {
         public float Resolution = 1;
 
         /// <summary>
-        /// Gets the WebViewPrefab used for the keyboard UI, or `null` if
-        /// the keyboard hasn't finished initializing yet.
-        /// You can use WaitUntilInitialized() to detect when the WebViewPrefab property is ready to use.
+        ///     Gets the WebViewPrefab used for the keyboard UI, or `null` if
+        ///     the keyboard hasn't finished initializing yet.
+        ///     You can use WaitUntilInitialized() to detect when the WebViewPrefab property is ready to use.
         /// </summary>
         /// <example>
-        /// <code>
+        ///     <code>
         /// await keyboard.WaitUntilInitialized();
         /// keyboard.WebViewPrefab.Clicked += (sender, eventArgs) => {
         ///     Debug.Log("Keyboard was clicked");
         /// };
         /// </code>
         /// </example>
-        public CanvasWebViewPrefab WebViewPrefab { get => (CanvasWebViewPrefab)_webViewPrefab; }
+        public CanvasWebViewPrefab WebViewPrefab => (CanvasWebViewPrefab) _webViewPrefab;
+
+        // Added in v3.12, deprecated in v4.0.
+        [Obsolete("CanvasKeyboard.InitialResolution is now deprecated. Please use CanvasKeyboard.Resolution instead.")]
+        public float InitialResolution
+        {
+            get => Resolution;
+            set => Resolution = value;
+        }
+
 
         /// <summary>
-        /// Creates a new instance.
+        ///     Creates a new instance.
         /// </summary>
         /// <example>
-        /// <code>
+        ///     <code>
         /// // Create a CanvasKeyboard.
         /// var keyboard = CanvasKeyboard.Instantiate();
         /// keyboard.transform.SetParent(canvas.transform, false);
@@ -72,15 +82,17 @@ namespace Vuplex.WebView {
         /// rectTransform.sizeDelta = new Vector2(650, 162);
         /// </code>
         /// </example>
-        public static CanvasKeyboard Instantiate() {
+        public static CanvasKeyboard Instantiate()
+        {
+            var prefabPrototype = (GameObject) Resources.Load("CanvasKeyboard");
+            var gameObject = Instantiate(prefabPrototype);
 
-            var prefabPrototype = (GameObject)Resources.Load("CanvasKeyboard");
-            var gameObject = (GameObject)Instantiate(prefabPrototype);
             return gameObject.GetComponent<CanvasKeyboard>();
         }
 
-        void _initCanvasKeyboard() {
 
+        private void _initCanvasKeyboard()
+        {
             var canvasWebViewPrefab = CanvasWebViewPrefab.Instantiate(_webViewOptions);
             _webViewPrefab = canvasWebViewPrefab;
             _webViewPrefab.transform.SetParent(transform, false);
@@ -94,18 +106,17 @@ namespace Vuplex.WebView {
             _init();
             // Disable the image, which is just used as a placeholder in the editor.
             var image = GetComponent<Image>();
-            if (image != null) {
+
+            if (image != null)
+            {
                 image.enabled = false;
             }
         }
 
-        void Start() => _initCanvasKeyboard();
 
-        // Added in v3.12, deprecated in v4.0.
-        [Obsolete("CanvasKeyboard.InitialResolution is now deprecated. Please use CanvasKeyboard.Resolution instead.")]
-        public float InitialResolution {
-            get => Resolution;
-            set => Resolution = value;
+        private void Start()
+        {
+            _initCanvasKeyboard();
         }
     }
 }
