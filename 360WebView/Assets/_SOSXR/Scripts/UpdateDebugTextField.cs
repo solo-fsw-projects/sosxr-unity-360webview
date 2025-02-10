@@ -60,7 +60,7 @@ public class UpdateDebugTextField : MonoBehaviour
 
             if (m_videoPlayerManager.Clips.Count == 0)
             {
-                m_infoText.text = "No clips found" + "\n" + "Please add clips to:" + "\n" + m_videoPlayerManager.m_configData.ClipDirectory;
+                m_infoText.text = "No clips found" + "\n" + "Please add clips to:" + "\n" + m_videoPlayerManager.m_configData.VideoDirectory;
 
                 continue;
             }

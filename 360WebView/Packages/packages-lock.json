@@ -25,21 +25,12 @@
       },
       "hash": "211c0072e3954446e6db274584089405d7329411"
     },
-    "com.sosxr.buildhelpers": {
-      "version": "https://github.com/solo-fsw/sosxr-unity-buildhelpers.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.textmeshpro": "3.0.9"
-      },
-      "hash": "80721a9ea9bbd14c163bf7144be0335c49430cca"
-    },
     "com.sosxr.configdata": {
       "version": "https://github.com/solo-fsw/sosxr-unity-configdata.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "b55e8800769cf6efc9a264993c135da91acc2ab8"
+      "hash": "e5ec7f6446a351092c433ee88f51fea70fb40d3b"
     },
     "com.sosxr.editortools": {
       "version": "https://github.com/solo-fsw/sosxr-unity-editortools.git",
@@ -49,7 +40,7 @@
         "com.unity.xr.interaction.toolkit": "3.0.7",
         "com.unity.recorder": "5.1.2"
       },
-      "hash": "1603c71f1ef2af5c3df062039c67e38768bb6498"
+      "hash": "273e61008e4443a325a2f1bd729b0f96d0e73150"
     },
     "com.sosxr.enhancedlogger": {
       "version": "https://github.com/mrstruijk/EnhancedLogger.git",
@@ -85,13 +76,6 @@
       "source": "git",
       "dependencies": {},
       "hash": "6c3c57fdddcd9312b2f398c2a42a2cfe995efd39"
-    },
-    "com.tarodev.autosave": {
-      "version": "https://github.com/solo-fsw/sosxr-unity-autosave.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "900d9ea04c8a0a773bedfabc3544504d385ffaf5"
     },
     "com.unity.adaptiveperformance": {
       "version": "5.1.1",
@@ -436,14 +420,6 @@
         "com.unity.settings-manager": "1.0.1"
       },
       "url": "https://packages.unity.com"
-    },
-    "com.unity.textmeshpro": {
-      "version": "3.0.9",
-      "depth": 1,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.ugui": "2.0.0"
-      }
     },
     "com.unity.timeline": {
       "version": "1.8.8",

@@ -1,4 +1,3 @@
-using SOSXR.ConfigData;
 using SOSXR.EnhancedLogger;
 using UnityEngine;
 using Vuplex.WebView;
@@ -7,8 +6,8 @@ using Vuplex.WebView;
 public class LoadQueryURL : MonoBehaviour
 {
     [SerializeField] protected CanvasWebViewPrefab m_webViewPrefab;
-    [SerializeField] private bool m_startAutomatically = false;
     [SerializeField] private WebViewConfigData m_configData;
+    [SerializeField] private bool m_startAutomatically = false;
 
 
     private void OnValidate()
@@ -25,20 +24,14 @@ public class LoadQueryURL : MonoBehaviour
     }
 
 
-    private void Start()
-    {
-        if (!m_startAutomatically)
-        {
-            return;
-        }
-
-        Invoke(nameof(LoadURL), 1);
-    }
-
-
     private void OnEnable()
     {
-        BuildQueryURL.OnQueryURLChanged += LoadURL;
+        m_configData.Subscribe(nameof(m_configData.QueryStringURL), o => LoadURL());
+
+        if (m_startAutomatically)
+        {
+            Invoke(nameof(LoadURL), 1);
+        }
     }
 
 
@@ -81,6 +74,6 @@ public class LoadQueryURL : MonoBehaviour
 
     private void OnDisable()
     {
-        BuildQueryURL.OnQueryURLChanged -= LoadURL;
+        m_configData.Unsubscribe(nameof(m_configData.QueryStringURL), o => LoadURL());
     }
 }

@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "2G0YC1ZG1T052C",
+    "m_SelectedDeviceId": "2G0YC1ZG1N0383",
     "m_SelectedProcess": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "2G0YC1ZG1N0383",
+        "name": "com.SOSXR.Video360",
+        "processId": 19396,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -87,10 +87,16 @@
             "exited": false
         },
         {
-            "deviceId": "2G0YC1ZG1T052C",
+            "deviceId": "2G0YC1ZG1N0383",
             "name": "com.SOSXR.Video360",
-            "processId": 10367,
-            "exited": true
+            "processId": 29070,
+            "exited": false
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 19396,
+            "exited": false
         },
         {
             "deviceId": "2G0YC1ZG1T052C",
@@ -120,7 +126,7 @@
             "deviceId": "2G0YC1ZG1T052C",
             "name": "com.SOSXR.Video360",
             "processId": 4545,
-            "exited": false
+            "exited": true
         }
     ],
     "m_Tags": {

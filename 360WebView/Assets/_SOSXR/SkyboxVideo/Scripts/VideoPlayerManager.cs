@@ -57,16 +57,18 @@ public class VideoPlayerManager : MonoBehaviour
 
     private void Start()
     {
-        if (VideoPlayer == null || m_audioSource == null)
+        if (m_configData == null || VideoPlayer == null || m_audioSource == null)
         {
-            this.Error("VideoPlayer or AudioSource not assigned.");
+            this.Error("ConfigData, videoPlayer or AudioSource not assigned.");
 
             enabled = false;
 
             return;
         }
 
-        var clipNames = FileHelpers.GetFileNamesFromDirectory(m_configData.Extensions, false, true, m_configData.ClipDirectory);
+        SetCorrectClipPath();
+
+        var clipNames = FileHelpers.GetFileNamesFromDirectory(m_configData.Extensions, false, true, m_configData.VideoDirectory);
 
         foreach (var clipName in clipNames)
         {
@@ -86,6 +88,8 @@ public class VideoPlayerManager : MonoBehaviour
     private void OnEnable()
     {
         VideoPlayer.errorReceived += ReceivedAnError;
+
+        m_configData.Subscribe(nameof(m_configData.VideoLocationType), _ => SetCorrectClipPath());
     }
 
 
@@ -95,11 +99,30 @@ public class VideoPlayerManager : MonoBehaviour
     }
 
 
+    private void SetCorrectClipPath()
+    {
+        if (m_configData.VideoLocationType == WebViewConfigData.Location.ArborXR)
+        {
+            m_configData.VideoDirectory = FileHelpers.GetArborXRPath();
+        }
+        else if (m_configData.VideoLocationType == WebViewConfigData.Location.Movies)
+        {
+            m_configData.VideoDirectory = FileHelpers.GetMoviesPath();
+        }
+        else if (m_configData.VideoLocationType == WebViewConfigData.Location.Documents)
+        {
+            m_configData.VideoDirectory = FileHelpers.GetDocumentsPath();
+        }
+
+        this.Info("Video Directory: " + m_configData.VideoDirectory);
+    }
+
+
     public void StartPlayer(string unused)
     {
         if (Clips.Count == 0)
         {
-            this.Error("Could not find any available clips in", m_configData.ClipDirectory);
+            this.Error("Could not find any available clips in", m_configData.VideoDirectory);
 
             return;
         }
@@ -174,7 +197,7 @@ public class VideoPlayerManager : MonoBehaviour
 
     private void GetURLAndPrepare(VideoSettingsCustom clip)
     {
-        VideoPlayer.url = m_configData.ClipDirectory + "/" + clip.ClipName;
+        VideoPlayer.url = m_configData.VideoDirectory + "/" + clip.ClipName;
 
         VideoPlayer.Prepare();
     }
@@ -249,6 +272,8 @@ public class VideoPlayerManager : MonoBehaviour
     private void OnDisable()
     {
         VideoPlayer.errorReceived -= ReceivedAnError;
+
+        m_configData.Unsubscribe(nameof(m_configData.VideoLocationType), _ => SetCorrectClipPath());
 
         StopAllCoroutines();
     }

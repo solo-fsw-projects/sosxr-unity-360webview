@@ -15,18 +15,18 @@ MonoBehaviour:
   m_updateJsonOnSpecificValueChanged:
   - QueryStringURL
   - PPN
-  m_baseURL: https://readrange.com/wp-content/uploads/2023/10/RR-hero-1-1536x960.jpeg
-  m_queryStringURL: 
-  m_ppn: 0
-  m_taskName: ThankLess
+  m_baseURL: https://jatos.services.universiteitleiden.nl/publix/vfIL9c1c62i
+  m_queryStringURL: https://jatos.services.universiteitleiden.nl/publix/vfIL9c1c62i?PPN=5566
+  m_ppn: 5566
+  m_taskName: VRcognition
   m_order: 3
   m_playWayEnum: 0
-  m_videoName: A2_265.mp4
+  m_videoName: 0087fd85-ecf1-4d8f-a8eb-ac32475889b3.mp4
   m_videoLocation: 0
-  m_clipDirectory: /Users/Rick/ArborXR/videos
+  m_clipDirectory: /Users/mrstruijk/ArborXR/videos
   m_extensions:
   - .mp4
   m_showAffordances: 0
   m_showKeyboard: 0
-  m_showDebug: 0
+  m_showDebug: 1
   m_debugUpdateInterval: 1

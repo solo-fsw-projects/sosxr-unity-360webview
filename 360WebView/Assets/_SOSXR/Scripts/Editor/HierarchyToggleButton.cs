@@ -11,19 +11,6 @@ namespace SOSXR.EditorTools
     [InitializeOnLoad]
     public static class HierarchyToggleButton
     {
-        static HierarchyToggleButton()
-        {
-            /*
-            if (PackageIsInstalled.PackageInstalled("com.browar.editor-toolbox"))
-            {
-                return;
-            }
-            */
-
-            // EditorApplication.hierarchyWindowItemOnGUI += HandleHierarchyWindowItemOnGUI;
-        }
-
-
         private static void HandleHierarchyWindowItemOnGUI(int instanceID, Rect selectionRect)
         {
             var gameObject = EditorUtility.InstanceIDToObject(instanceID) as GameObject;

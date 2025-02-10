@@ -6,6 +6,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WebView Config Data", menuName = "SOSXR/Config Data/WebView Config Data")]
 public class WebViewConfigData : BaseConfigData
 {
+    public enum Location
+    {
+        ArborXR,
+        Movies,
+        Documents,
+        Other
+    }
+
+
     public enum Ordering
     {
         InOrder,
@@ -23,23 +32,15 @@ public class WebViewConfigData : BaseConfigData
     }
 
 
-    public enum VideoLocationType
-    {
-        Arbor,
-        Local,
-        Other
-    }
-
-
     [SerializeField] private string m_baseURL = "https://youtu.be/xvFZjo5PgG0?si=F3cJFXtwofUAeA";
     [SerializeField] [DisableEditing] [TextArea] private string m_queryStringURL = "";
-    [SerializeField] private int m_ppn = -1;
+    [SerializeField] private int m_PPN = -1;
     [SerializeField] private string m_taskName = "TaskToDo";
     [SerializeField] private Ordering m_order = Ordering.Counterbalanced;
     [SerializeField] private PlayWay m_playWayEnum = PlayWay.All;
     [SerializeField] private string m_videoName = "VideoName";
-    [SerializeField] private VideoLocationType m_videoLocation = VideoLocationType.Arbor;
-    [SerializeField] private string m_clipDirectory = "/Users/Mine/Videos";
+    [SerializeField] private Location m_videoLocationType = Location.ArborXR;
+    [SerializeField] private string m_videoDirectory = "/Users/Mine/Videos";
     [SerializeField] private string[] m_extensions = {".mp4"};
     [SerializeField] private bool m_showAffordances = false;
     [SerializeField] private bool m_showKeyboard = false;
@@ -83,16 +84,16 @@ public class WebViewConfigData : BaseConfigData
         set => SetValue(ref m_showAffordances, value, nameof(ShowAffordances));
     }
 
-    public VideoLocationType VideoLocation
+    public Location VideoLocationType
     {
-        get => m_videoLocation;
-        set => SetValue(ref m_videoLocation, value, nameof(VideoLocation));
+        get => m_videoLocationType;
+        set => SetValue(ref m_videoLocationType, value, nameof(VideoLocationType));
     }
 
-    public string ClipDirectory
+    public string VideoDirectory
     {
-        get => m_clipDirectory;
-        set => SetValue(ref m_clipDirectory, value, nameof(ClipDirectory));
+        get => m_videoDirectory;
+        set => SetValue(ref m_videoDirectory, value, nameof(VideoDirectory));
     }
 
     public string[] Extensions
@@ -121,13 +122,13 @@ public class WebViewConfigData : BaseConfigData
 
     public int PPN
     {
-        get => m_ppn;
-        set => SetValue(ref m_ppn, value, nameof(PPN));
+        get => m_PPN;
+        set => SetValue(ref m_PPN, value, nameof(PPN));
     }
 
     public string PPNString
     {
-        get => m_ppn.ToString();
+        get => m_PPN.ToString();
         set => PPN = int.TryParse(value, out var result) ? result : -1;
     }
 
