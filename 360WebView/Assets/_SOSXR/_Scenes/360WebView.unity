@@ -770,6 +770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1535870893}
   - component: {fileID: 1535870892}
+  - component: {fileID: 1535870894}
   m_Layer: 0
   m_Name: BuildQueryURL
   m_TagString: Untagged
@@ -807,6 +808,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1535870894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535870891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10a7605a5fa4c86ac1a37f8acb305fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_webViewPrefab: {fileID: 1387645559}
+  m_configData: {fileID: 11400000, guid: 5916ee44769fd49e78e3394c18649b82, type: 2}
+  m_startAutomatically: 0
 --- !u!1 &1598269138
 GameObject:
   m_ObjectHideFlags: 0

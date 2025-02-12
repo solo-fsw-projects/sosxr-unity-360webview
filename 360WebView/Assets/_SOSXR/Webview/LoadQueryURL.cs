@@ -1,3 +1,4 @@
+using System.Collections;
 using SOSXR.EnhancedLogger;
 using UnityEngine;
 using Vuplex.WebView;
@@ -8,6 +9,8 @@ public class LoadQueryURL : MonoBehaviour
     [SerializeField] protected CanvasWebViewPrefab m_webViewPrefab;
     [SerializeField] private WebViewConfigData m_configData;
     [SerializeField] private bool m_startAutomatically = false;
+
+    private Coroutine _coroutine;
 
 
     private void OnValidate()
@@ -26,40 +29,58 @@ public class LoadQueryURL : MonoBehaviour
 
     private void OnEnable()
     {
-        m_configData.Subscribe(nameof(m_configData.QueryStringURL), o => LoadURL());
+        m_configData.Subscribe(nameof(m_configData.QueryStringURL), _ => LoadURL());
 
         if (m_startAutomatically)
         {
-            Invoke(nameof(LoadURL), 1);
+            LoadURL();
         }
     }
 
 
     [ContextMenu(nameof(LoadURL))]
-    public void LoadURL()
+    private void LoadURL()
     {
-        if (m_configData == null)
+        if (_coroutine != null)
         {
-            this.Error("Cannot continue since we don't have a reference to the relevant ConfigData");
-
-            return;
+            StopCoroutine(_coroutine);
         }
 
-        if (string.IsNullOrEmpty(m_configData.QueryStringURL))
-        {
-            this.Error("Trying to load an empty URL!");
+        _coroutine = StartCoroutine(LoadUrlCR());
+    }
 
-            return;
+
+    private IEnumerator LoadUrlCR()
+    {
+        var delay = 0.1f;
+
+        while (m_webViewPrefab.WebView == null)
+        {
+            this.Warning("WebView is not ready yet. Waiting for", delay, "seconds before checking again");
+
+            yield return new WaitForSeconds(delay);
+        }
+
+        if (m_configData == null || string.IsNullOrEmpty(m_configData.QueryStringURL))
+        {
+            this.Error("Cannot load URL since ConfigData is null or QueryStringURL is empty");
+
+            yield break;
         }
 
         m_webViewPrefab.WebView.LoadUrl(m_configData.QueryStringURL);
 
-        this.Success("Loaded URL", m_configData.QueryStringURL, "into our webview");
+        this.Success("Loaded URL", m_configData.QueryStringURL, "into our lovely WebView");
     }
 
 
     private void OnDisable()
     {
-        m_configData.Unsubscribe(nameof(m_configData.QueryStringURL), o => LoadURL());
+        StopAllCoroutines();
+
+        if (m_configData != null)
+        {
+            m_configData.Unsubscribe(nameof(m_configData.QueryStringURL), _ => LoadURL());
+        }
     }
 }

@@ -36,6 +36,8 @@ namespace SOSXR.ConfigData.Samples
             foreach (var query in m_queryStringVariables)
             {
                 m_configData.Subscribe(query, _ => BuildQuery());
+                
+                Debug.LogFormat("Subscribed to {0}", query);
             }
         }
 

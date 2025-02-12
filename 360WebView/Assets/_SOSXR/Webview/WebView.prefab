@@ -390,7 +390,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5219192651810435840}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LoadQueryURL, Assembly-CSharp
         m_MethodName: LoadURL
         m_Mode: 1
@@ -621,7 +621,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3893458180404753306}
   - component: {fileID: 6721013262826877192}
-  - component: {fileID: 5219192651810435840}
   - component: {fileID: 3891511597857512286}
   - component: {fileID: 3786480303864242092}
   m_Layer: 5
@@ -664,22 +663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb89331e494e4682bde519d7b466fab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_clearCacheOnAwake: 1
---- !u!114 &5219192651810435840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3823927024918529662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d10a7605a5fa4c86ac1a37f8acb305fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_webViewPrefab: {fileID: 3786480303864242092}
-  m_startAutomatically: 1
-  m_configData: {fileID: 11400000, guid: 5916ee44769fd49e78e3394c18649b82, type: 2}
 --- !u!222 &3891511597857512286
 CanvasRenderer:
   m_ObjectHideFlags: 0

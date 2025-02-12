@@ -30,7 +30,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "694069e140407751d8a187a75fee4d46cf028f54"
+      "hash": "f7975e78b1c71368a14d0d9c226f83b1dbc7862b"
     },
     "com.sosxr.editortools": {
       "version": "https://github.com/solo-fsw/sosxr-unity-editortools.git",
@@ -47,7 +47,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "18b1de44f72cd564b3a32cdee2a19ad527cb4916"
+      "hash": "92053d3bec7bc09bdbf005e5426b6ce75aff5c42"
     },
     "com.sosxr.extensionmethods": {
       "version": "https://github.com/solo-fsw/sosxr-unity-extensionmethods.git",
