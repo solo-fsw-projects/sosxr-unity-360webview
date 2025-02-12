@@ -30,7 +30,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "e5ec7f6446a351092c433ee88f51fea70fb40d3b"
+      "hash": "694069e140407751d8a187a75fee4d46cf028f54"
     },
     "com.sosxr.editortools": {
       "version": "https://github.com/solo-fsw/sosxr-unity-editortools.git",
@@ -40,7 +40,7 @@
         "com.unity.xr.interaction.toolkit": "3.0.7",
         "com.unity.recorder": "5.1.2"
       },
-      "hash": "273e61008e4443a325a2f1bd729b0f96d0e73150"
+      "hash": "46975b63a525c8019e1e502e7149c219e14eabc8"
     },
     "com.sosxr.enhancedlogger": {
       "version": "https://github.com/mrstruijk/EnhancedLogger.git",

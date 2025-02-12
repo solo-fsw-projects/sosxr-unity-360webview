@@ -38,20 +38,6 @@ public class LoadQueryURL : MonoBehaviour
     [ContextMenu(nameof(LoadURL))]
     public void LoadURL()
     {
-        if (m_webViewPrefab == null)
-        {
-            this.Error("No WebViewPrefab found!");
-
-            return;
-        }
-
-        if (m_webViewPrefab.WebView == null)
-        {
-            this.Error("No WebView found!");
-
-            return;
-        }
-
         if (m_configData == null)
         {
             this.Error("Cannot continue since we don't have a reference to the relevant ConfigData");

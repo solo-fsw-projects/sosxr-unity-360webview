@@ -16,14 +16,14 @@ MonoBehaviour:
   - QueryStringURL
   - PPN
   m_baseURL: https://jatos.services.universiteitleiden.nl/publix/vfIL9c1c62i
-  m_queryStringURL: https://jatos.services.universiteitleiden.nl/publix/vfIL9c1c62i?PPN=5566
-  m_ppn: 5566
+  m_queryStringURL: https://jatos.services.universiteitleiden.nl/publix/vfIL9c1c62i?PPN=2222
+  m_PPN: 2222
   m_taskName: VRcognition
   m_order: 3
   m_playWayEnum: 0
-  m_videoName: 0087fd85-ecf1-4d8f-a8eb-ac32475889b3.mp4
-  m_videoLocation: 0
-  m_clipDirectory: /Users/mrstruijk/ArborXR/videos
+  m_videoName: B1_265.mp4
+  m_videoLocationType: 1
+  m_videoDirectory: /Users/mrstruijk/Movies
   m_extensions:
   - .mp4
   m_showAffordances: 0

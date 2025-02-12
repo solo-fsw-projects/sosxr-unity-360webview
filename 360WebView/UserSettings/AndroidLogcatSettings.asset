@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "2G0YC1ZG1N0383",
         "name": "com.SOSXR.Video360",
-        "processId": 19396,
+        "processId": 5850,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -96,6 +96,18 @@
             "deviceId": "2G0YC1ZG1N0383",
             "name": "com.SOSXR.Video360",
             "processId": 19396,
+            "exited": false
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 26748,
+            "exited": false
+        },
+        {
+            "deviceId": "2G0YC1ZG1N0383",
+            "name": "com.SOSXR.Video360",
+            "processId": 5850,
             "exited": false
         },
         {

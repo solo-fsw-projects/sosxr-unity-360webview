@@ -51,30 +51,9 @@ public class UpdateDebugTextField : MonoBehaviour
         {
             yield return new WaitForSeconds(m_configData.DebugUpdateInterval);
 
-            if (m_videoPlayerManager == null)
-            {
-                m_infoText.text = "No VideoPlayerManager found";
-
-                continue;
-            }
-
-            if (m_videoPlayerManager.Clips.Count == 0)
-            {
-                m_infoText.text = "No clips found" + "\n" + "Please add clips to:" + "\n" + m_videoPlayerManager.m_configData.VideoDirectory;
-
-                continue;
-            }
-
-            if (m_videoPlayerManager.Trials == null)
-            {
-                m_infoText.text = "No Trials found";
-
-                continue;
-            }
-
             var modulus = -999;
 
-            if (m_videoPlayerManager.Trials != null && m_configData.Order == WebViewConfigData.Ordering.Counterbalanced)
+            if (m_videoPlayerManager?.Trials != null && m_configData.Order == WebViewConfigData.Ordering.Counterbalanced)
             {
                 modulus = m_videoPlayerManager.Trials.Modulus;
             }
@@ -88,13 +67,13 @@ public class UpdateDebugTextField : MonoBehaviour
                     "Task Name: " + m_configData.TaskName + "\n" +
                     "Video Name: " + m_configData.VideoName + "\n" +
                     "PPN: " + m_configData.PPN + "\n" +
-                    "Video Path: " + m_videoPlayerManager.VideoPlayer.url + "\n" +
-                    "Playing: " + m_videoPlayerManager.CurrentClipTime + " sec" + "\n" +
-                    "Clip Length: " + m_videoPlayerManager.CurrentClipDuration + " sec" + "\n" +
-                    "Dimensions: " + m_videoPlayerManager.Dimensions + "\n" +
+                    "Video Path: " + m_videoPlayerManager?.VideoPlayer.url + "\n" +
+                    "Playing: " + m_videoPlayerManager?.CurrentClipTime + " sec" + "\n" +
+                    "Clip Length: " + m_videoPlayerManager?.CurrentClipDuration + " sec" + "\n" +
+                    "Dimensions: " + m_videoPlayerManager?.Dimensions + "\n" +
                     "Ordering: " + m_configData.Order + "\n" +
                     "PlayWay: " + m_configData.PlayWayEnum + "\n" +
-                    "Conditions: " + m_videoPlayerManager.Trials.Conditions.Count + "\n" +
+                    "Conditions: " + m_videoPlayerManager?.Trials?.Conditions.Count + "\n" +
                     "Modulus: " + modulus;
             }
             catch (Exception e)
